@@ -1,0 +1,165 @@
+/* Base styles consistent with other pages */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #1a1a1a, #333);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background: linear-gradient(to bottom, #e0e0e0, #fff);
+  color: #222;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00bfff;
+  transition: background-color 0.3s ease;
+}
+
+body.light .container {
+  background-color: #f0f0f0;
+  color: #222;
+  box-shadow: 0 0 20px #0077cc;
+}
+
+.cbucks-badge {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #00bfff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00bfff;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light .cbucks-badge {
+  background-color: #0077cc;
+  color: #eee;
+}
+
+.cbucks-badge.pulse {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.shop-item {
+  background-color: #333;
+  border: 1px solid #555;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.shop-item:hover {
+  transform: scale(1.02);
+}
+
+body.light .shop-item {
+  background-color: #ddd;
+  border: 1px solid #bbb;
+  color: #222;
+}
+
+.shop-item.purchased {
+  box-shadow: 0 0 15px gold;
+}
+
+.shop-item p {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.rarity {
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+  color: white;
+  user-select: none;
+}
+
+.common { background-color: #888; }
+.rare { background-color: #00bfff; }
+.legendary { background-color: gold; color: black; }
+
+.shop-item button {
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-item button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.shop-item button:hover:not(:disabled) {
+  background-color: #0099cc;
+}
+
+#owned-items {
+  background-color: #111;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+body.light #owned-items {
+  background-color: #eee;
+  color: #222;
+}
+
+/* Theme toggle button */
+#theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  z-index: 1100;
+  transition: color 0.3s ease;
+}
+
+body.light #theme-btn {
+  color: #222;
+}

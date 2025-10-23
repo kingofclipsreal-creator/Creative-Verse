@@ -1,0 +1,129 @@
+/* ==============================
+🎨 Creative Verse — Login Styles
+============================== */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #050b18, #000);
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ========== LIGHT THEME ========== */
+body.light {
+  background: linear-gradient(180deg, #f0f4ff, #cfe0ff);
+  color: #1a1a1a;
+}
+
+.login-box {
+  background: rgba(10, 15, 25, 0.9);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+  width: 320px;
+  text-align: center;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.light .login-box {
+  background: white;
+  box-shadow: 0 0 25px rgba(0, 100, 200, 0.3);
+}
+
+h2 {
+  color: #00bfff;
+  text-shadow: 0 0 10px #00bfff;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #00e5ff;
+  box-shadow: 0 0 10px #00bfff;
+}
+
+body.light input {
+  background: #f4f7ff;
+  color: #000;
+  border-color: #0077cc;
+}
+
+button {
+  background-color: #00bfff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #00e5ff;
+  transform: scale(1.05);
+}
+
+#login-message {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.signup-redirect {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.signup-redirect a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.signup-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* ========== THEME TOGGLE ========== */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#theme-btn {
+  background: none;
+  border: 2px solid #00bfff;
+  border-radius: 50%;
+  color: #00bfff;
+  font-size: 20px;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#theme-btn:hover {
+  background: #00bfff;
+  color: #000;
+}

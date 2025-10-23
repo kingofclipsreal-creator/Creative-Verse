@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Verse — Create Game</title>
+  <link rel="stylesheet" href="create.css">
+  <link rel="icon" href="1.png">
+</head>
+<body>
+
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-btn" title="Toggle theme">🌙</button>
+  </div>
+
+  <main class="create-panel">
+    <h2>Create a New Game</h2>
+    <input type="text" id="game-name" placeholder="Game Title">
+    <textarea id="game-desc" placeholder="Game Description"></textarea>
+    
+    <button onclick="createGame()">Publish Game</button>
+
+    <div id="blocklyDiv"></div>
+    <xml id="toolbox" style="display: none">
+      <category name="Events">
+        <block type="controls_if"></block>
+        <block type="controls_repeat_ext"></block>
+      </category>
+      <category name="Actions">
+        <block type="spawn_avatar"></block>
+        <block type="move_avatar"></block>
+        <block type="change_score"></block>
+      </category>
+    </xml>
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+  </main>
+
+  <script src="create.js"></script>
+</body>
+</html>

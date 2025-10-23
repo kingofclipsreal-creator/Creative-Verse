@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Verse — Games Hub</title>
+  <link rel="stylesheet" href="games.css">
+  <link rel="icon" href="1.png">
+</head>
+<body>
+
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-btn" title="Toggle theme">🌙</button>
+  </div>
+
+  <!-- Cbucks Badge -->
+  <span class="cbucks-badge">💰 Cbucks: <span id="cbucks-corner">0</span></span>
+
+  <h2>Play Games</h2>
+  <div class="container">
+    <div id="game-list"></div>
+    <div id="game-preview">Select a game to preview</div>
+  </div>
+
+  <h2>Trade Center</h2>
+  <div class="container">
+    <input type="text" id="trade-recipient" placeholder="Recipient Username">
+    <input type="text" id="trade-my-items" placeholder="Your Items (comma-separated)">
+    <input type="text" id="trade-their-items" placeholder="Their Items (comma-separated)">
+    <input type="text" id="trade-message" placeholder="Message (optional)">
+    <button onclick="proposeTrade()">Propose Trade</button>
+  </div>
+
+  <h3>Trade Inbox</h3>
+  <div class="container">
+    <button onclick="viewTradeInbox()">View Trade Offers</button>
+    <div id="trade-inbox" class="trade-inbox"></div>
+  </div>
+
+  <h2>Create a Game</h2>
+  <div class="container">
+    <input type="text" id="game-name-create" placeholder="Game Title">
+    <textarea id="game-desc-create" placeholder="Game Description"></textarea>
+    <button onclick="createGame()">Publish</button>
+  </div>
+
+  <h2>Design Game Logic</h2>
+  <div class="container">
+    <div id="blocklyDiv"></div>
+    <button onclick="runGameLogic()">Run Game Logic</button>
+  </div>
+
+  <canvas id="gamePreview" width="800" height="400"></canvas>
+
+  <script src="games.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Verse — Game Hub</title>
+  <link rel="icon" href="1.png" />
+  <link rel="stylesheet" href="index.css" />
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <!-- 🌙 Theme Toggle -->
+  <div class="theme-toggle">
+    <button id="theme-btn" title="Toggle Theme">🌙</button>
+  </div>
+
+  <!-- 🧭 Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <h1>Creative Verse</h1>
+      <p class="tagline">Imagine. Build. Play.</p>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="games.html">Games</a>
+      <a href="create.html">Create</a>
+      <a href="avatar.html">Avatar</a>
+      <a href="login.html" id="nav-login">Login</a>
+      <a href="signup.html" id="nav-signup">Sign Up</a>
+    </nav>
+
+    <div class="nav-right">
+      <div id="cbucks-badge" class="cbucks-badge">💰 0 C-Bucks</div>
+    </div>
+  </header>
+
+  <!-- 🌌 Hero Section -->
+  <section class="hero cinematic">
+    <div class="hero-inner">
+      <h2>Imagine. Build. Play.</h2>
+      <p class="hero-sub">
+        Welcome to your own Creative Verse — build worlds, craft games, and earn rewards.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="signup.html">Join Now</a>
+        <a class="btn ghost" href="games.html">Play Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧩 Game Hub Panels -->
+  <main>
+    <!-- 👤 Account Panel -->
+    <section class="panel account-panel">
+      <h3>Account</h3>
+      <p>Logged in as: <strong id="current-user">Guest</strong></p>
+      <div class="btn-group">
+        <button id="logout-btn">Logout</button>
+        <button id="switch-btn">Switch Account</button>
+      </div>
+
+      <div id="admin-tools" class="admin-panel" style="display:none;">
+        <h4>Admin Controls 👑</h4>
+        <input id="admin-username" type="text" placeholder="Enter username" />
+        <input id="admin-amount" type="number" placeholder="Enter C-Bucks amount" />
+        <div class="btn-group">
+          <button id="admin-give">➕ Give C-Bucks</button>
+          <button id="admin-take">➖ Take C-Bucks</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💰 C-Bucks Panel -->
+    <section class="panel cbucks-panel">
+      <h3>C-Bucks</h3>
+      <p>Your Balance: <strong id="cbucks-amount">0</strong></p>
+      <div class="btn-group">
+        <button id="claim-daily">Claim Daily Reward 🎁</button>
+      </div>
+      <p id="daily-note" class="muted small"></p>
+    </section>
+
+    <!-- 🧠 Daily Riddle -->
+    <section class="panel riddle-panel">
+      <h3>Daily Riddle 🧩</h3>
+      <p id="riddle-question" class="riddle-question">Loading riddle...</p>
+      <input id="riddle-answer" type="text" placeholder="Your answer" autocomplete="off" />
+      <div class="btn-group">
+        <button id="riddle-submit">Submit Answer</button>
+        <button id="riddle-refresh">New Riddle (today)</button>
+      </div>
+      <p id="riddle-feedback" class="muted small"></p>
+    </section>
+
+    <!-- 🤝 Friends Panel -->
+    <section class="panel friends-panel">
+      <h3>Friends 🤝</h3>
+      <div class="row">
+        <input id="friend-name" type="text" placeholder="Add friend by username" />
+        <button id="friend-add">Add Friend</button>
+      </div>
+      <input id="friend-search" type="text" placeholder="Search users..." />
+      <div id="friends-list" class="list scrollable">No friends yet.</div>
+    </section>
+
+    <!-- 🏆 Leaderboard Panel -->
+    <section class="panel leaderboard-panel">
+      <h3>Leaderboard 🏆</h3>
+      <input id="leaderboard-search" type="text" placeholder="Search player..." />
+      <div id="leaderboard-list" class="list scrollable">
+        <div class="list-item">
+          <span class="rank">#1</span>
+          <span class="name">Mira</span>
+          <span class="score">2400 pts</span>
+        </div>
+        <div class="list-item">
+          <span class="rank">#2</span>
+          <span class="name">Zero</span>
+          <span class="score">2100 pts</span>
+        </div>
+        <div class="list-item">
+          <span class="rank">#3</span>
+          <span class="name">Kade</span>
+          <span class="score">1900 pts</span>
+        </div>
+        <div class="list-item">
+          <span class="rank">#4</span>
+          <span class="name">Nora</span>
+          <span class="score">1650 pts</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🧭 Footer -->
+  <footer>
+    <p>© 2025 Creative Verse — Built for imagination and fun.</p>
+  </footer>
+</body>
+</html>

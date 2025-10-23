@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Verse — Sign Up</title>
+  <link rel="icon" href="1.png" />
+  <link rel="stylesheet" href="signup.css">
+  
+</head>
+<body>
+ <script defer src="signup.js"></script><!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-btn" title="Toggle theme">🌙</button>
+  </div>
+
+  <main class="signup-panel" role="main" aria-label="Sign Up form">
+    <h2>Create Account</h2>
+
+    <input type="text" id="new-username" placeholder="Username" autocomplete="username" aria-label="Username" />
+    <input type="password" id="new-password" placeholder="Password" autocomplete="new-password" aria-label="Password" />
+
+    <button class="signup-btn" id="signup-btn" aria-live="polite">Sign Up</button>
+
+    <p id="signup-message" aria-live="assertive" role="alert"></p>
+
+    <p class="login-link">
+      Already have an account? <a href="login.html">Login here</a>.
+    </p>
+  </main>
+
+</body>
+</html>

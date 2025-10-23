@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Verse — Avatar</title>
+  <link rel="stylesheet" href="avatar.css">
+  <link rel="icon" href="1.png">
+</head>
+<body>
+
+  <!-- Theme toggle -->
+  <div class="theme-toggle">
+    <button id="theme-btn" title="Toggle theme">🌙</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>CreativeVerse</h1>
+      <p class="tagline">Customize Your Avatar</p>
+    </div>
+    <div class="nav-right">
+      <span class="cbucks-badge">💰 Cbucks: <span id="cbucks-display">0</span></span>
+    </div>
+  </nav>
+
+  <!-- Avatar Section -->
+  <section class="avatar-section">
+    <div class="avatar-preview">
+      <img id="avatar-img" src="default-avatar.png" alt="Avatar Preview">
+    </div>
+    <input type="text" id="avatar-name" placeholder="Avatar Name">
+    <input type="number" id="avatar-level" placeholder="Avatar Level">
+    <button onclick="updateAvatar()">Save Avatar</button>
+  </section>
+
+  <script src="avatar.js"></script>
+</body>
+</html>

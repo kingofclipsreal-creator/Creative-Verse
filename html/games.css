@@ -1,0 +1,144 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #050b18, #000);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+body.light {
+  background: #f0f4ff;
+  color: #111;
+}
+
+/* Cbucks badge */
+.cbucks-badge {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #00bfff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+/* Container Panels */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgba(10,15,25,0.9);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px #00bfff55;
+  transition: background 0.3s;
+}
+body.light .container {
+  background: #fff;
+  box-shadow: 0 0 20px #00bfff22;
+  color: #111;
+}
+
+/* Headings */
+h2, h3 {
+  color: #00bfff;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Game cards */
+.game-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 0 12px #00bfff33;
+}
+body.light .game-card {
+  background: #f4f7ff;
+  color: #111;
+}
+
+/* Inputs & Textareas */
+input, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(0,191,255,0.2);
+  background: rgba(0,0,0,0.25);
+  color: inherit;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+input:focus, textarea:focus {
+  border-color: #00e5ff;
+  background: rgba(0,0,0,0.35);
+}
+body.light input, body.light textarea {
+  background: #f4f7ff;
+  border-color: rgba(0,120,200,0.15);
+  color: #111;
+}
+body.light input:focus, body.light textarea:focus {
+  border-color: #00e5ff;
+  background: #e8f0ff;
+}
+
+/* Buttons */
+button {
+  background: #00bfff;
+  color: #000;
+  border-radius: 28px;
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00bfff;
+  transition: 0.3s;
+}
+button:hover {
+  background: #00e5ff;
+  box-shadow: 0 0 32px #00e5ff;
+  transform: translateY(-2px);
+}
+
+/* Trade inbox */
+.trade-inbox {
+  padding: 12px;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid #00bfff;
+  font-style: italic;
+}
+body.light .trade-inbox {
+  background: #f4f7ff;
+  border-color: #00bfff55;
+  color: #111;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: #000;
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 20px #00bfff55;
+}
+body.light canvas {
+  background: #fff;
+  border-color: #00bfff55;
+}
+
+/* Responsive */
+@media(max-width:480px){
+  .container {
+    padding: 15px;
+  }
+}
